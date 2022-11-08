@@ -1,0 +1,119 @@
+:root {
+    --borders: #000;
+    --main-text: #fff;
+    --light: #673d6e; 
+}
+/*universal selectors*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*This is your body styling for font, color and background color*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; 
+    font-family: 'Cascadia Code';
+    color: var(--main-text);
+    background-color: #304153;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: var(--light);
+    border-bottom: 3px solid var(--borders);
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 40px;
+}
+
+.header nav {
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+    color: var(--main-text)
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul a {
+    text-decoration: none;
+    color: var(--main-text)
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    padding: 3px;
+}
+
+#resources {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#resources li {
+    background-color: #444444;
+  }
+
+#resources a {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+    border-top: 1px solid #c9d4d8;
+    border-bottom: 1px solid #444444;
+  }
+
+main {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+main section {
+    height: 400px;
+    width: 500px;
+    border: 5px dashed var(--borders);
+    background-color: #204975;
+}
+main section h2 {
+    margin: 10px;
+    text-decoration: underline;
+}
+
+main section ul {
+    list-style: none;
+    text-align: left;
+    line-height: 22px;
+}
+
+/*This is the styling for the footer/credits*/
+footer {
+    z-index: 1000;
+    display: block;
+    margin-top: auto;
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    color: var(--main-text);
+    background-color: var(--light);
+    border-top: 3px solid var(--borders);
+}
+/*Styling for the footer header*/
+footer h4 {
+    padding-top: 20px;
+    font-size: 20px; 
+}

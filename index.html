@@ -13,9 +13,9 @@
         <h1>Javascript Quiz!</h1>
         <nav>
             <ul class="navibar">
-                <li><a href="#">Refresh</a></li>
-                <li><a href="#">Highscore</a></li>
-                <li><a href="#">Study Resources</a>
+                <li><a href="#" id="refresh">Refresh</a></li>
+                <li><a href="#" id="highscores">Highscore</a></li>
+                <li><a href="#" id="study">Study Resources</a>
                     <ul id="resources">
                         <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" rel="noopener noreferrer">Javascript Introduction</a></li>
                         <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">Javascript Variables</a></li>
@@ -29,22 +29,49 @@
 
     <main>
         <container id="quiz-box">
-            <section class="greeter">
+            <section id="greeter">
                 <h2>Welcome to the Coding Quiz!</h2>
                 <ul>
                     <li>1. Click 'Start Quiz' below to begin the timed quiz.</li>
-                    <li>2. The timer will begin once you start and you will have five minutes to complete the quiz!</li>
+                    <li>2. The timer will begin once you start and you will have three minutes to complete the quiz!</li>
                     <li>3. Wrong answers will deduct 20 seconds from the timer and thus lowering your score.</li>
                     <li>4. If you'd like to restart, simply hit the 'Refresh' button in the top right corner.</li>
-                    <li>5. If you would like som help studying, there's a few resources linked in the top right corner as well. Hover for the full list!</li>
+                    <li>5. If you would like some help studying, there's a few resources linked in the top right corner as well. Hover for the full list!</li>
                     <li>6. Good luck!</li>
-                </ol>
+                </ul>
+                <form id="start">
+                    <button id="starter-btn" class="button">Start Quiz</button>
+                </form>
+            </section>
+
+            <section id="quiz">
+                <p id="timer"> Time left: 180 s</p>
+                <h2 id="quiz-header">Question</h2>
+                <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quo tempora eaque odio! Rerum maxime accusantium, enim totam asperiores deleniti? Illum molestias libero ipsam aut quidem voluptatum nisi expedita quos?</p>
+                <form id="answers">
+                    <button id="first-btn" class="qst-btn">First</button>
+                    <button id="second-btn" class="qst-btn">Second</button>
+                    <button id="third-btn" class="qst-btn">Third</button>
+                    <button id="fourth-btn" class="qst-btn">Fourth</button>
+                </form>
+                <form id="controls">
+                    <button id="submit-btn" class="footer-btns">Submit</button>
+                    <button id="quit-btn" class="footer-btns">Quit</button>
+                </form>
+            </section>
+
+            <section id="scores">
+                <h2>Highscores</h2>
+                <form id="scores-controls">
+                    <button id="clear-btn" class="scores-btns">Clear</button>
+                    <button id="return-btn" class="scores-btns">Return</button>
+                </form>
             </section>
         </container>
     </main>
     <!--This is our footer/credits-->
     <footer class="footer">
-        <h4>Made with ❤️️ <!--blood sweat and tears included--> by Leslie</h4>
+        <h3>Made with ❤️️ <!--blood sweat and tears included--> by Leslie</h3>
     </footer>
     
 </body>

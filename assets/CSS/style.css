@@ -76,29 +76,106 @@ nav ul li {
   }
 
 main {
-    margin-top: 100px;
+    margin-top: 110px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     text-align: center;
 }
 
+#quiz,
+#scores {
+    display: ;
+    min-height: 400px;
+}
+
 main section {
-    height: 400px;
+    height: auto;
     width: 500px;
     border: 5px dashed var(--borders);
     background-color: #204975;
 }
+
 main section h2 {
     margin: 10px;
     text-decoration: underline;
 }
 
+#quiz-header {
+    padding-left: 115px;
+}
+
 main section ul {
+    margin: 25px;
     list-style: none;
     text-align: left;
     line-height: 22px;
 }
+#start::before,
+#controls::before,
+#scores-controls::before {
+    content: " ";
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #e7e9eb;
+    height: 2px;
+  }
+
+
+.button,
+.qst-btn,
+.footer-btns,
+.scores-btns {
+    display: block;
+    border-radius: 25px;
+    color: var(--main-text);
+    font-size: 14px;
+    line-height: 14px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: left;
+    cursor: pointer;
+    background-color: var(--light);
+    border: 3px solid var(--borders);
+    box-shadow: #000 0px 1px 6px 0px #000 0px 1px 1px 0px;
+}
+
+#starter-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.qst-btn {
+    width: 90%;
+}
+
+
+.footer-btns,
+.scores-btns {
+    display: inline-block;
+}
+
+.button:hover,
+.qst-btn:hover,
+.scores-btns:hover,
+.footer-btns:hover {
+    color: #000;
+    background-color: rgb(35, 83, 142);
+}
+
+#timer {
+    position: relative;
+    float: right;
+    padding: 5px;
+}
+
 
 /*This is the styling for the footer/credits*/
 footer {
@@ -113,7 +190,7 @@ footer {
     border-top: 3px solid var(--borders);
 }
 /*Styling for the footer header*/
-footer h4 {
+footer h3 {
     padding-top: 20px;
     font-size: 20px; 
 }

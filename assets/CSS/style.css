@@ -176,6 +176,16 @@ main section ul {
     padding: 5px;
 }
 
+#highscore-titles {
+    display: inline-block;
+    justify-content: space-around;
+}
+
+#scores-list {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*This is the styling for the footer/credits*/
 footer {

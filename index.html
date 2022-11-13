@@ -13,16 +13,9 @@
         <h1>Javascript Quiz!</h1>
         <nav>
             <ul class="navibar">
-                <li><a href="#" id="refresh">Refresh</a></li>
-                <li><a href="#" id="highscores">Highscore</a></li>
-                <li><a href="#" id="study">Study Resources</a>
-                    <ul id="resources">
-                        <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" rel="noopener noreferrer">Javascript Introduction</a></li>
-                        <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">Javascript Variables</a></li>
-                        <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" rel="noopener noreferrer">Javascript Functions</a></li>
-                        <li><a href="https://www.w3schools.com/js/js_debugging.asp" target="_blank" rel="noopener noreferrer">Javascript Debugging</a></li>
-                    </ul>
-                </li>
+                <li><a href="javascript:window.location.reload(true)" id="refresh">Refresh</a></li>
+                <li><a href="#" id="highscores">Highscores</a></li>
+                <li><a href="#" id="study">Study Resources</a></li>
             </ul>
         </nav>
     </header>
@@ -45,18 +38,30 @@
             </section>
 
             <section id="quiz">
-                <p id="timer"> Time left: 180 s</p>
-                <h2 id="quiz-header">Question</h2>
-                <p id="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quo tempora eaque odio! Rerum maxime accusantium, enim totam asperiores deleniti? Illum molestias libero ipsam aut quidem voluptatum nisi expedita quos?</p>
+                <p id="timer"> Time left: <span id="countdown">180</span></p>
+                <h2 id="quiz-header">Quiz Time!</h2>
+                <p id="question"><span></span></p>
                 <form id="answers">
-                    <button id="first-btn" class="qst-btn">First</button>
-                    <button id="second-btn" class="qst-btn">Second</button>
-                    <button id="third-btn" class="qst-btn">Third</button>
-                    <button id="fourth-btn" class="qst-btn">Fourth</button>
+                    <button class="qst-btn">First</button>
+                    <button class="qst-btn">Second</button>
+                    <button class="qst-btn">Third</button>
+                    <button class="qst-btn">Fourth</button>
                 </form>
                 <form id="controls">
-                    <button id="submit-btn" class="footer-btns">Submit</button>
+                    <button id="submit-btn" class="footer-btns">Next</button>
                     <button id="quit-btn" class="footer-btns">Quit</button>
+                </form>
+            </section>
+
+            <section id="results">
+                <h2>Quiz completed!</h2>
+                <p>Your final score: <span id="score"></span></p>
+                <p>Enter initials: <input type="text " id="initials" maxlength="2" style="text-transform:uppercase"></p>
+                <p id="resultsPS">If you'd like to see all of your previous attempts, click the <strong>'Highscores'</strong> button in the top right corner. 
+                    If you'd like help studying click on the <strong>'Study Resources'</strong> button to get a list of tutorials to start out for studying. Good luck!</p>
+                <form id="end">
+                    <button id="initialsSubmit" class="end-btns">Submit Score</button>
+                    <button id="startOver" class="end-btns">Start Over</button>
                 </form>
             </section>
 
@@ -125,12 +130,27 @@
                     <button id="return-btn" class="scores-btns">Return</button>
                 </form>
             </section>
+
+            <section id="study-help">
+                <h2>Study Resources</h2>
+                <P>This is a page dedicated to listing good resources for studying! Clicking a link will open a new
+                    tab for you. Good luck with your studying!</P>
+                <ul id="study-list">
+                    <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" rel="noopener noreferrer">Javascript Introduction</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">Javascript Variables</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" rel="noopener noreferrer">Javascript Functions</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_debugging.asp" target="_blank" rel="noopener noreferrer">Javascript Debugging</a></li>
+                </ul>
+                <form id="start">
+                    <button id="home-btn" class="button">Return</button>
+                </form>
+            </section>
         </container>
     </main>
     <!--This is our footer/credits-->
     <footer class="footer">
         <h3>Made with ❤️️ <!--blood sweat and tears included--> by Leslie</h3>
     </footer>
-    
+<script src="./Javascript/script.js"></script>
 </body>
 </html>

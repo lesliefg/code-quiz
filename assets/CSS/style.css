@@ -1,6 +1,6 @@
 :root {
     --borders: #000;
-    --main-text: #fff;
+    --main-text: rgb(196, 195, 195);
     --light: #673d6e; 
 }
 /*universal selectors*/
@@ -84,8 +84,10 @@ main {
 }
 
 #quiz,
-#scores {
-    display: ;
+#results,
+#scores,
+#study-help {
+    display: none;
     min-height: 400px;
 }
 
@@ -113,7 +115,10 @@ main section ul {
 }
 #start::before,
 #controls::before,
-#scores-controls::before {
+#scores-controls::before,
+#resultsPS::before,
+#end::before,
+#study-list::before {
     content: " ";
     display: block;
     width: 80%;
@@ -121,7 +126,7 @@ main section ul {
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    background: #e7e9eb;
+    background: var(--main-text);
     height: 2px;
   }
 
@@ -129,7 +134,8 @@ main section ul {
 .button,
 .qst-btn,
 .footer-btns,
-.scores-btns {
+.scores-btns,
+.end-btns {
     display: block;
     border-radius: 25px;
     color: var(--main-text);
@@ -144,7 +150,8 @@ main section ul {
     box-shadow: #000 0px 1px 6px 0px #000 0px 1px 1px 0px;
 }
 
-#starter-btn {
+#starter-btn,
+#home-btn {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -158,7 +165,8 @@ main section ul {
 
 
 .footer-btns,
-.scores-btns {
+.scores-btns,
+.end-btns {
     display: inline-block;
 }
 
@@ -184,6 +192,36 @@ main section ul {
 #scores-list {
     margin-left: auto;
     margin-right: auto;
+}
+
+#study-list {
+    text-align: center;
+}
+
+#study-list a {
+    display: block;
+    text-decoration: none;
+    width: 80%;
+    line-height: 50px;
+    list-style: none;
+    color: #792288;
+    background-color: #d094da;
+    border: 3px solid #000;
+    margin: auto;
+}
+
+strong {
+    color: #d094da;
+}
+
+#study-list a:hover {
+    width: 80%;
+    line-height: 50px;
+    list-style: none;
+    color: #d094da;
+    background-color: #792288;
+    border: 3px solid #000;
+    margin: auto;
 }
 
 

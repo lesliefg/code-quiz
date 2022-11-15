@@ -22,7 +22,7 @@
 
     <main>
         <container id="quiz-box">
-            <section id="greeter">
+            <section id="greeter" style="display: block;">
                 <h2>Welcome to the Coding Quiz!</h2>
                 <ul>
                     <li>1. Click 'Start Quiz' below to begin the timed quiz.</li>
@@ -37,35 +37,32 @@
                 </form>
             </section>
 
-            <section id="quiz">
-                <p id="timer"> Time left: <span id="countdown">180</span></p>
+            <section id="quiz" style="display: none;">
+                <p id="timer"> Time left: <span id="countdown">100</span></p>
                 <h2 id="quiz-header">Quiz Time!</h2>
                 <p id="question"><span></span></p>
-                <form id="answers">
-                    <button class="qst-btn">First</button>
-                    <button class="qst-btn">Second</button>
-                    <button class="qst-btn">Third</button>
-                    <button class="qst-btn">Fourth</button>
+                <form id="answers" class="answers_list">
+                    <!--Answer buttons are inserted using javaScript lines 135-144-->
                 </form>
                 <form id="controls">
-                    <button id="submit-btn" class="footer-btns">Next</button>
+                    <button id="next-btn" class="footer-btns">Next</button>
                     <button id="quit-btn" class="footer-btns">Quit</button>
                 </form>
             </section>
 
-            <section id="results">
+            <section id="results" style="display: none;">
                 <h2>Quiz completed!</h2>
                 <p>Your final score: <span id="score"></span></p>
-                <p>Enter initials: <input type="text " id="initials" maxlength="2" style="text-transform:uppercase"></p>
+                <p>Enter initials: <input type="text" id="initials" maxlength="2" style="text-transform:uppercase" placeholder="F & L"></p>
                 <p id="resultsPS">If you'd like to see all of your previous attempts, click the <strong>'Highscores'</strong> button in the top right corner. 
                     If you'd like help studying click on the <strong>'Study Resources'</strong> button to get a list of tutorials to start out for studying. Good luck!</p>
                 <form id="end">
-                    <button id="initialsSubmit" class="end-btns">Submit Score</button>
+                    <button id="submit" class="end-btns">Submit Score</button>
                     <button id="startOver" class="end-btns">Start Over</button>
                 </form>
             </section>
 
-            <section id="scores">
+            <section id="scores" style="display: none;">
                 <h2>Highscores</h2>
                 <table id="scores-list">
                     <tr>
@@ -131,7 +128,7 @@
                 </form>
             </section>
 
-            <section id="study-help">
+            <section id="study-help" style="display: none;">
                 <h2>Study Resources</h2>
                 <P>This is a page dedicated to listing good resources for studying! Clicking a link will open a new
                     tab for you. Good luck with your studying!</P>

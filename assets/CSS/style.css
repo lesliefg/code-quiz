@@ -57,38 +57,12 @@ nav ul li {
     padding: 3px;
 }
 
-#resources {
-    display: none;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-#resources li {
-    background-color: #444444;
-  }
-
-#resources a {
-    border-left: 1px solid #444444;
-    border-right: 1px solid #444444;
-    border-top: 1px solid #c9d4d8;
-    border-bottom: 1px solid #444444;
-  }
-
 main {
     margin-top: 110px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
     text-align: center;
-}
-
-#quiz,
-#results,
-#scores,
-#study-help {
-    display: none;
-    min-height: 400px;
 }
 
 main section {
@@ -163,6 +137,20 @@ main section ul {
     width: 90%;
 }
 
+.qst-btn.correct {
+    color: var(--main-text);
+    background-color: #357d44;
+}
+
+.qst-btn.wrong {
+    color: var(--main-text);
+    background-color: #871919;
+}
+
+.qst-btn.disabled {
+    pointer-events: none;
+}
+
 
 .footer-btns,
 .scores-btns,
@@ -173,7 +161,8 @@ main section ul {
 .button:hover,
 .qst-btn:hover,
 .scores-btns:hover,
-.footer-btns:hover {
+.footer-btns:hover,
+.end-btns:hover {
     color: #000;
     background-color: rgb(35, 83, 142);
 }
@@ -213,6 +202,7 @@ main section ul {
 strong {
     color: #d094da;
 }
+
 
 #study-list a:hover {
     width: 80%;

@@ -21,16 +21,18 @@
     </header>
 
     <main>
-        <container id="quiz-box">
+        <container id="box">
             <section id="greeter" style="display: block;">
                 <h2>Welcome to the Coding Quiz!</h2>
                 <ul>
                     <li>1. Click 'Start Quiz' below to begin the timed quiz.</li>
                     <li>2. The timer will begin once you start and you will have three minutes to complete the quiz!</li>
-                    <li>3. Wrong answers will deduct 20 seconds from the timer and thus lowering your score.</li>
-                    <li>4. If you'd like to restart, simply hit the 'Refresh' button in the top right corner.</li>
-                    <li>5. If you would like some help studying, there's a few resources linked in the top right corner as well. Hover for the full list!</li>
-                    <li>6. Good luck!</li>
+                    <li>3. Right answers will highlight green and reward you 5 points.</li>
+                    <li>4. Wrong answers will highlight red and deduct 10 seconds from the timer.</li>
+                    <li>5. As long as you finish before the timer ends you will be awarded 50 points.</li>
+                    <li>6. If you use the 'Quit' button, your score will have 50 points deducted.</li>
+                    <li>7. If you would like some help studying, there's a few resources linked in the top right corner as well. Hover for the full list!</li>
+                    <li>8. Good luck!</li>
                 </ul>
                 <form id="start">
                     <button id="starter-btn" class="button">Start Quiz</button>
@@ -52,7 +54,7 @@
 
             <section id="results" style="display: none;">
                 <h2>Quiz completed!</h2>
-                <p>Your final score: <span id="score"></span></p>
+                <p id="score"></p>
                 <p>Enter initials: <input type="text" id="initials" maxlength="2" style="text-transform:uppercase" placeholder="F & L"></p>
                 <p id="resultsPS">If you'd like to see all of your previous attempts, click the <strong>'Highscores'</strong> button in the top right corner. 
                     If you'd like help studying click on the <strong>'Study Resources'</strong> button to get a list of tutorials to start out for studying. Good luck!</p>
@@ -64,65 +66,9 @@
 
             <section id="scores" style="display: none;">
                 <h2>Highscores</h2>
-                <table id="scores-list">
-                    <tr>
-                        <th>Initials</th>
-                        <th></th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td >--</td>
-                            <td>.....................</td>
-                            <td>---</td>
-                        </tr>
-                </table>
-                <form id="scores-controls">
+                <div id="scores_list"><p>Your record</p></div><br><br>
+                    <div>
+                <form d="scores-controls">
                     <button id="clear-btn" class="scores-btns">Clear</button>
                     <button id="return-btn" class="scores-btns">Return</button>
                 </form>

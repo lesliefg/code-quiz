@@ -25,7 +25,6 @@ var initialsInput = document.querySelector("#initials");
 let scoreEl = document.querySelector("#score");
 let questionCount = 0;
 let playerScore = 50;
-var finalScore = [];
 
 //Timer varibles
 let timeEl = document.querySelector("#countdown");
@@ -82,7 +81,8 @@ quitQuiz.addEventListener("click", function() {
 });
 
 initialsSubmit.addEventListener("click", function() {
-    saveInfo();
+    saveScore();
+    initialsInput.value = '';
 });
 
 //This is the start over button to restart the quiz
@@ -235,45 +235,51 @@ function optionSelected(answer) {
 function showResults() {
     quizPage.setAttribute("style", "display: none;")
     resultsPage.setAttribute("style", "display: block;")
+    scoreEl.textContent = "Your final score is: " + playerScore ;
 }
 
 function gameOver() {
     quizPage.setAttribute("style", "display: none;")
     resultsPage.setAttribute("style", "display: block;")
     playerScore = playerScore - 50;
-    finalScore.textContent = "Your final score is :" + playerScore;
+    scoreEl.textContent = "Your final score is: " + playerScore ;
 }
 
 function quitPenalty() {
+    clearInterval(timerInterval);
     playerScore = playerScore - 50;
     console.log(playerScore);
+    scoreEl.textContent = "Your final score is: " + playerScore ;
 }
 
 //test area
-function saveInfo() {
-    var initialsInput = document.querySelector("#initials");
-    localStorage.setItem("initialinput", initialsInput.value);
 
-    window.localStorage.getItem(playerScore);
-// }
+function getScore () {
+    var currentList =localStorage.getItem("ScoreList");
+    if (currentList !== null ){
+        freshList = JSON.parse(currentList);
+        return freshList;
+    } else {
+        freshList = [];
+    }
+    return freshList;
+};
 
-// function saveInfo() {
-//     var playerInit = initialsInput.value;
-//     scoreList.push({ initials: playerInit, score: playerScore });
+function addItem (n) {
+    var addedList = getScore();
+    addedList.push(n);
+    localStorage.setItem("ScoreList", JSON.stringify(addedList));
+};
 
-//     // var roundInfo = {
-//     //     initials: initialsInput.value,
-//     //     score: playerScore
-//     // }
-//     window.localStorage.setItem("roundInfo", JSON.stringify(roundInfo));
+function saveScore () {
+    var roundInfo ={
+        initials: initialsInput.value,
+        score: playerScore
+    }
+    addItem(roundInfo);
 }
 
-// function shoppingListSubmit(event) {
-//     event.preventDefault();
-//     let shoppingInputValue = $('#shopping-input').val();
-//     shoppingListEl.append('<li>' + shoppingInputValue);
-//     $('input[type="text"]').val('');
-// }
+
 
 
 //Acceptance Criteria

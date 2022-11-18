@@ -18,8 +18,6 @@ A webpage created to test your knowledge on coding so far! It features a timer a
 - Also times you and provides a list of all attempts to see your improvement
 
 ## Credits
-
-- Reset code provided by <i>Eric A. Meyer.</i> Link to provided code and licensing: [https://meyerweb.com/eric/tools/css/reset/] 
 - Huge thank you to people on stackoverflow for help and w3schools tutorials
 - Sorting arrays tutorial: [https://www.w3schools.com/js/js_array_sort.asp]
 - Slice tutorial for top 10/max 10 scores [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice]

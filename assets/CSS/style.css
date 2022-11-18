@@ -1,3 +1,4 @@
+/*our root colors*/
 :root {
     --borders: #000;
     --main-text: rgb(196, 195, 195);
@@ -19,7 +20,7 @@ body {
     color: var(--main-text);
     background-color: #304153;
 }
-
+/*This styles our header*/
 header {
     position: fixed;
     width: 100%;
@@ -29,34 +30,34 @@ header {
     background-color: var(--light);
     border-bottom: 3px solid var(--borders);
 }
-
+/*This styles our header title*/
 header h1 {
     display: inline-block;
     font-size: 40px;
 }
-
+/*This places our header nav buttons*/
 .header nav {
     margin-right: 20px;
     float: right;
     font-size: 20px;
     color: var(--main-text)
 }
-
+/*This removes the bullet style from the nav*/
 .header nav ul {
     list-style-type: none;
 }
-
+/*This gives our navbar links their color*/
 .header nav ul a {
     text-decoration: none;
     color: var(--main-text)
 }
-
+/*This adds a bit of spacing and keeps our navbar inline*/
 nav ul li {
     display: inline-block;
     margin-left: 25px;
     padding: 3px;
 }
-
+/*This places the main section of our webpage*/
 main {
     margin-top: 110px;
     margin-left: auto;
@@ -64,7 +65,7 @@ main {
     margin-bottom: 40px;
     text-align: center;
 }
-
+/*This styles our section boxes that will house our greeter, quiz and other pages*/
 main section {
     height: auto;
     width: 500px;
@@ -72,22 +73,23 @@ main section {
     border: 5px dashed var(--borders);
     background-color: #204975;
 }
-
+/*Section header styling*/
 main section h2 {
     margin: 10px;
     text-decoration: underline;
 }
-
+/*This places our quiz header*/
 #quiz-header {
     padding-left: 115px;
 }
-
+/*This places our greeter content*/
 main section ul {
     margin: 25px;
     list-style: none;
     text-align: left;
     line-height: 22px;
 }
+/*This adds the visual white line between the buttons and content of the box*/
 #start::before,
 #controls::before,
 #scores-controls::before,
@@ -104,8 +106,7 @@ main section ul {
     background: var(--main-text);
     height: 2px;
   }
-
-
+/*This styles all of our buttons*/
 .button,
 .qst-btn,
 .footer-btns,
@@ -124,41 +125,39 @@ main section ul {
     border: 3px solid var(--borders);
     box-shadow: #000 0px 1px 6px 0px #000 0px 1px 1px 0px;
 }
-
+/*This places our singular buttons*/
 #starter-btn,
 #home-btn {
     margin-left: auto;
     margin-right: auto;
-    display: block;
     font-size: 22px;
     line-height: 22px;
 }
-
+/*This gives our question answer buttons their unique width*/
 .qst-btn {
     width: 90%;
 }
-
+/*This styles the correct choice if selected*/
 .qst-btn.correct {
     color: var(--main-text);
     background-color: #357d44;
 }
-
+/*This styles the incorrect choice if selected*/
 .qst-btn.wrong {
     color: var(--main-text);
     background-color: #871919;
 }
-
+/*This disables all other choices after a selection is made*/
 .qst-btn.disabled {
     pointer-events: none;
 }
-
-
+/*This keeps our double footer buttons inline*/
 .footer-btns,
 .scores-btns,
 .end-btns {
     display: inline-block;
 }
-
+/*This adds effects to buttons when hovered*/
 .button:hover,
 .qst-btn:hover,
 .scores-btns:hover,
@@ -167,22 +166,28 @@ main section ul {
     color: #000;
     background-color: rgb(35, 83, 142);
 }
-
+/*This places our timer/countdown*/
 #timer {
     position: relative;
     float: right;
     padding: 5px;
 }
-
+/*This places our highscores title*/
 #highscore-titles {
     display: inline-block;
-    justify-content: space-around;
+    text-align: center;
 }
-
+/*This places the highscores list*/
+.individualScores {
+    margin-left: 150px;
+    word-spacing: 1px;
+    text-transform: uppercase;
+}
+/*This centers the study list links*/
 #study-list {
     text-align: center;
 }
-
+/*This styles our study link buttons*/
 #study-list a {
     display: block;
     text-decoration: none;
@@ -194,12 +199,11 @@ main section ul {
     border: 3px solid #000;
     margin: auto;
 }
-
+/*Coloring for bolded text on the results page*/
 strong {
     color: #d094da;
 }
-
-
+/*This adds effects to the study list links*/
 #study-list a:hover {
     width: 80%;
     line-height: 50px;
@@ -209,7 +213,6 @@ strong {
     border: 3px solid #000;
     margin: auto;
 }
-
 
 /*This is the styling for the footer/credits*/
 footer {

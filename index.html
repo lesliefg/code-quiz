@@ -5,28 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!--This links our heart favicon for the tab icon-->
     <link rel="icon" href="https://icons.iconarchive.com/icons/paomedia/small-n-flat/512/heart-icon.png">
     <title>Code Quiz</title>
 </head>
 <body>
+    <!--This is where our navibar begins-->
     <header class="header">
         <h1>Javascript Quiz!</h1>
         <nav>
             <ul class="navibar">
+                <!--Links for the navibar-->
                 <li><a href="javascript:window.location.reload(true)" id="refresh">Refresh</a></li>
                 <li><a href="#" id="highscores">Highscores</a></li>
                 <li><a href="#" id="study">Study Resources</a></li>
             </ul>
         </nav>
     </header>
-
+<!--This is where our main section of the webpage begins-->
     <main>
+        <!--Container will hold our box for the quiz, answers, study guide and other pages-->
         <container id="box">
+            <!--Each 'page' has is its own section. Display will make it so only the greeter page launches upon opening the webpage-->
             <section id="greeter" style="display: block;">
+                <!--Each section has a title-->
                 <h2>Welcome to the Coding Quiz!</h2>
+                <!--This is our quiz instructions area-->
                 <ul>
                     <li>1. Click 'Start Quiz' below to begin the timed quiz.</li>
-                    <li>2. The timer will begin once you start and you will have three minutes to complete the quiz!</li>
+                    <li>2. The timer will begin once you start and you will have 100 seconds to complete the quiz!</li>
                     <li>3. Right answers will highlight green and reward you 5 points.</li>
                     <li>4. Wrong answers will highlight red and deduct 10 seconds from the timer.</li>
                     <li>5. As long as you finish before the timer ends you will be awarded 50 points.</li>
@@ -34,65 +41,80 @@
                     <li>7. If you would like some help studying, there's a few resources linked in the top right corner as well. Hover for the full list!</li>
                     <li>8. Good luck!</li>
                 </ul>
-                <form id="start">
+                <!--This is our start quiz button-->
+                <div id="start">
                     <button id="starter-btn" class="button">Start Quiz</button>
                 </form>
             </section>
 
+            <!--This is the 'page' our quiz will appear on. Display is set to 'none' so it doesn't appear upon launch-->
             <section id="quiz" style="display: none;">
+                <!--This is where our timer is inserted, the function in javascript will make it start-->
                 <p id="timer"> Time left: <span id="countdown">100</span></p>
+                <!--quiz titles-->
                 <h2 id="quiz-header">Quiz Time!</h2>
+                <!--This is where our questions will appear/be inserted via javaScript-->
                 <p id="question"><span></span></p>
-                <form id="answers" class="answers_list">
-                    <!--Answer buttons are inserted using javaScript lines 135-144-->
-                </form>
-                <form id="controls">
+                <div id="answers" class="answers_list">
+                    <!--Answer buttons are inserted using javaScript lines 202-211-->
+                </div>
+                <!--These are the footer buttons to click next question or quit the quiz-->
+                <div id="controls">
                     <button id="next-btn" class="footer-btns">Next</button>
                     <button id="quit-btn" class="footer-btns">Quit</button>
-                </form>
+                </div>
             </section>
-
+            <!--This will bring up our results page where we submit our score-->
             <section id="results" style="display: none;">
+                <!--Results page title-->
                 <h2>Quiz completed!</h2>
+                <!--This is where our score will import once we're done-->
                 <p id="score"></p>
                 <p>Enter initials: <input type="text" id="initials" maxlength="2" style="text-transform:uppercase" placeholder="F & L"></p>
+                <!--Extra paragraph giving tips on what to do next-->
                 <p id="resultsPS">If you'd like to see all of your previous attempts, click the <strong>'Highscores'</strong> button in the top right corner. 
                     If you'd like help studying click on the <strong>'Study Resources'</strong> button to get a list of tutorials to start out for studying. Good luck!</p>
-                <form id="end">
+                <!--This is our end buttons to submit score or start over the quiz-->
+                    <div id="end">
                     <button id="submit" class="end-btns">Submit Score</button>
                     <button id="startOver" class="end-btns">Start Over</button>
-                </form>
+                </div>
             </section>
-
+            <!--This is ours scores page-->
             <section id="scores" style="display: none;">
                 <h2>Highscores</h2>
-                <div id="scores_list"><p>Your record</p></div><br><br>
-                    <div>
-                <form d="scores-controls">
+                <h3>initials&emsp; &emsp; &emsp; &emsp;Score</h3>
+                <!--This is where our scores will populate after saving them-->
+                <ul id="scores-list">Your record</ul>
+                <!--THis is our scores buttons to either clear local storage or go back to the greeter page-->
+                <div id="scores-controls">
                     <button id="clear-btn" class="scores-btns">Clear</button>
                     <button id="return-btn" class="scores-btns">Return</button>
-                </form>
+                </div>
             </section>
-
+            <!--This is our study resources page-->
             <section id="study-help" style="display: none;">
                 <h2>Study Resources</h2>
+                <!--Little blurb on what this page is for-->
                 <P>This is a page dedicated to listing good resources for studying! Clicking a link will open a new
                     tab for you. Good luck with your studying!</P>
+                <!--This is a list of useful links to study up on javascript-->
                 <ul id="study-list">
                     <li><a href="https://www.w3schools.com/js/js_intro.asp" target="_blank" rel="noopener noreferrer">Javascript Introduction</a></li>
                         <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank" rel="noopener noreferrer">Javascript Variables</a></li>
                         <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank" rel="noopener noreferrer">Javascript Functions</a></li>
                         <li><a href="https://www.w3schools.com/js/js_debugging.asp" target="_blank" rel="noopener noreferrer">Javascript Debugging</a></li>
                 </ul>
-                <form id="start">
+                <!--This is our button section that we can use to go back to the home page-->
+                <div id="start">
                     <button id="home-btn" class="button">Return</button>
-                </form>
+                </div>
             </section>
         </container>
     </main>
     <!--This is our footer/credits-->
     <footer class="footer">
-        <h3>Made with ❤️️ <!--blood sweat and tears included--> by Leslie</h3>
+        <h4>Made with ❤️️ <!--blood sweat and tears included--> by Leslie</h4>
     </footer>
 <script src="./Javascript/script.js"></script>
 </body>

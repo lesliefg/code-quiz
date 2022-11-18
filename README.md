@@ -6,12 +6,12 @@ A webpage created to test your knowledge on coding so far! It features a timer a
 
 ## Installation
 
-- No downloads necessary, follow link to open webpage and interact with live page [tba]
+- No downloads necessary, follow link to open webpage and interact with live page [https://lesliefg.github.io/code-quiz]
 - Or follow this link to repo to view code and comments [https://github.com/lesliefg/code-quiz]
 
 ## Usage
 
-- Live webpage link provided [tba]
+- Live webpage link provided [https://lesliefg.github.io/code-quiz]
 - Github repo link [https://github.com/lesliefg/code-quiz]
 
 - Use this as a way to test your javascript knowledge so far! 
@@ -20,6 +20,9 @@ A webpage created to test your knowledge on coding so far! It features a timer a
 ## Credits
 
 - Reset code provided by <i>Eric A. Meyer.</i> Link to provided code and licensing: [https://meyerweb.com/eric/tools/css/reset/] 
+- Huge thank you to people on stackoverflow for help and w3schools tutorials
+- Sorting arrays tutorial: [https://www.w3schools.com/js/js_array_sort.asp]
+- Slice tutorial for top 10/max 10 scores [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice]
 
 ## License
 
@@ -33,3 +36,4 @@ Please refer to the LICENSE in the repo.
 
 ## Screenshots of finished and deployed webpage
 - Deployed desktop webpage 
+![alt text](/assets/images/Code%20Quiz.gif)

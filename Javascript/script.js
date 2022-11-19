@@ -267,6 +267,7 @@ function getScore () {
     } else {
         newList = [];
     }
+    return newList;
 };
 //This function will add our information from saveScore to the local storage for getScore to push into an array list
 function addItem (n) {
